@@ -1,11 +1,11 @@
-
+import Hero from "./components/Hero";
 
 const App = () => {
   return (
     <main>
-      <h1 className="text-5xl text-green-500 font-bold">Welcome to Awwwesome</h1>
+      <Hero />
     </main>
-  )
-}
+  );
+};
 
-export default App
+export default App;
