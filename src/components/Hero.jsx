@@ -1,8 +1,12 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Button from "./Button";
 import { TiLocationArrow } from "react-icons/ti";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+
+
+gsap.registerPlugin(ScrollTrigger)
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(1);
@@ -12,6 +16,12 @@ const Hero = () => {
 
   const totalVideos = 3;
   const nextVideoRef = useRef(null);
+
+  useEffect(() => {
+    if (loadedVideos === totalVideos - 1) {
+      setIsLoading(false);
+    }
+  }, [loadedVideos]);
 
   // animation of appearing next video by clicking on a hero section
   useGSAP(
@@ -41,12 +51,12 @@ const Hero = () => {
   // animation of transforming current video by scrolling down
   useGSAP(() => {
     gsap.set("#video-frame", {
-      clipPath: "polygon(14% 0%, 72% 0%, 90% 90%, 0% 100%)",
-      borderRadius: "0 0 40% 10%",
+      clipPath: "polygon(14% 0, 72% 0, 88% 90%, 0 95%)",
+      borderRadius: "0% 0% 40% 10%",
     });
     gsap.from("#video-frame", {
-      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%,)",
-      borderRadius: "0 0 0 0",
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      borderRadius: "0% 0% 0% 0%",
       ease: "power1.inOut",
       scrollTrigger: {
         trigger: "#video-frame",
@@ -70,6 +80,7 @@ const Hero = () => {
   const getVideoSrc = (index) => `
     videos/hero-${index}.mp4
   `;
+
   return (
     <section className="relative h-dvh w-screen overflow-x-hidden">
       {isLoading && (
