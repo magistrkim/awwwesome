@@ -13,6 +13,7 @@ const Hero = () => {
   const totalVideos = 3;
   const nextVideoRef = useRef(null);
 
+  // animation of appearing next video by clicking on a hero section
   useGSAP(
     () => {
       if (hasClicked) {
@@ -37,6 +38,25 @@ const Hero = () => {
     { dependencies: [currentIndex], revertOnUpdate: true }
   );
 
+  // animation of transforming current video by scrolling down
+  useGSAP(() => {
+    gsap.set("#video-frame", {
+      clipPath: "polygon(14% 0%, 72% 0%, 90% 90%, 0% 100%)",
+      borderRadius: "0 0 40% 10%",
+    });
+    gsap.from("#video-frame", {
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%,)",
+      borderRadius: "0 0 0 0",
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: "#video-frame",
+        start: "center center",
+        end: "bottom center",
+        scrub: true,
+      },
+    });
+  });
+
   const upcomingVideoIndex = (currentIndex % totalVideos) + 1;
   const handleMiniVdClick = () => {
     setHasClicked(true);
@@ -52,6 +72,15 @@ const Hero = () => {
   `;
   return (
     <section className="relative h-dvh w-screen overflow-x-hidden">
+      {isLoading && (
+        <div className="flex-center absolute z-[100] h-dvh w-screen overflow-hidden bg-violet-50">
+          <div className="three-body">
+            <div className="three-body__dot" />
+            <div className="three-body__dot" />
+            <div className="three-body__dot" />
+          </div>
+        </div>
+      )}
       <div
         id="video-frame"
         className="relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75"
