@@ -137,7 +137,7 @@ const Hero = () => {
           G<b>a</b>ming
         </h1>
         <div className="absolute left-0 top-0 size-full z-40">
-          <div className="mt-5 px-24 sm:px-10">
+          <div className="mt-24 px-5 sm:px-10">
             <h1 className="special-font hero-heading text-blue-75">
               Redefi<b>n</b>e
             </h1>
