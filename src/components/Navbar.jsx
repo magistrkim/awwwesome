@@ -1,11 +1,15 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Button from "./Button";
 import { TiLocationArrow } from "react-icons/ti";
 
 const navItems = ["Nexus", "Vault", "Prologue", "About", "Contacts"];
 
 const Navbar = () => {
+  const [isAudioPlaying, setIsAudioPlaying] = useState(false);
+  const [isIndicatorActive, setIsIndicatorActive] = useState(false);
   const navContainerRef = useRef(null);
+  const audioElementRef = useRef(null);
+  const toggleAudioIndicator = () => {};
   return (
     <div
       ref={navContainerRef}
@@ -25,11 +29,37 @@ const Navbar = () => {
           <div className="flex h-full items-center">
             <div className="hidden md:block">
               {navItems.map((item, index) => (
-                <a href={item} key={index} className="nav-hover-btn">
+                <a
+                  href={`#${item.toLowerCase()}`}
+                  key={index}
+                  className="nav-hover-btn"
+                >
                   {item}
                 </a>
               ))}
             </div>
+            <button
+              className="ml-10 flex items-center space-x-0.5"
+              type="button"
+              onClick={toggleAudioIndicator}
+            >
+              <audio
+                src="/audio/loop.mp3"
+                ref={audioElementRef}
+                className="hidden"
+                loop
+              >
+                {[1, 2, 3, 4].map((bar, index) => (
+                  <div
+                    key={index}
+                    className={`indicator-line ${
+                      isIndicatorActive ? "active" : ""
+                    } `}
+                    style={{ animationDelay: `${bar * 0.1}s` }}
+                  />
+                ))}
+              </audio>
+            </button>
           </div>
         </nav>
       </header>
