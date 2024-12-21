@@ -1,9 +1,5 @@
+const BentoCard = ({ src, title, description, isComingSoon }) => {
+  return <div className="text-white">{title}</div>;
+};
 
-
-const BentoCard = () => {
-  return (
-    <div className="text-white">BentoCard</div>
-  )
-}
-
-export default BentoCard
+export default BentoCard;
