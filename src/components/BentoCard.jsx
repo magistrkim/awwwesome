@@ -26,6 +26,6 @@ export default BentoCard;
 
 BentoCard.propTypes = {
   src: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.node.isRequired,
   description: PropTypes.string,
 };
