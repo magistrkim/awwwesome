@@ -29,6 +29,41 @@ const Features = () => {
           games into a rewarding adventure."
           />
         </div>
+        <div className="grid grid-cols-2 grid-rows-3 gap-7 h-[135vh]">
+          <div className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2">
+            <BentoCard
+              src="/videos/feature-2.mp4"
+              title={
+                <>
+                  zig<b>m</b>a
+                </>
+              }
+              description="An anime and gaming-inspired NFT collection - the IP primed for expansion."
+            />
+          </div>
+          <div className="bento-tilt_1 ms-32 row-span-1 md:col-span-1 md:ms-0">
+            <BentoCard
+              src="/videos/feature-3.mp4"
+              title={
+                <>
+                  n<b>e</b>xus
+                </>
+              }
+              description="A gamified social hub, adding a new dimension of play to social interaction for Web3 communities."
+            />
+          </div>
+          <div className="bento-tilt_1 me-14 md:col-span-1 md:me-0">
+            <BentoCard
+              src="/videos/feature-4.mp4"
+              title={
+                <>
+                  az<b>u</b>l
+                </>
+              }
+              description="A cross-world AI Agent - elevating your gameplay to be more fun and productive."
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
