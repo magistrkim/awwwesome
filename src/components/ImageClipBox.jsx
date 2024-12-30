@@ -1,11 +1,16 @@
+import PropTypes from "prop-types";
 
-
-const ImageClipBox = () => {
+const ImageClipBox = ({ src, clipClass }) => {
   return (
-    <div className="contact-clip-path-1">
-      <img src="img/contact-1.webp" alt="" />
+    <div className={clipClass}>
+      <img src={src} alt="image" />
     </div>
   );
-}
+};
 
-export default ImageClipBox
+export default ImageClipBox;
+
+ImageClipBox.propTypes = {
+  clipClass: PropTypes.string,
+  src: PropTypes.string.isRequired,
+};
