@@ -73,6 +73,7 @@ const Navbar = () => {
             <div className="hidden md:block">
               {navItems.map((item, index) => (
                 <a
+                  aria-label={`Go to ${item}`}
                   href={`#${item.toLowerCase()}`}
                   key={index}
                   className="nav-hover-btn"
@@ -85,6 +86,7 @@ const Navbar = () => {
               className="ml-10 flex items-center space-x-0.5"
               type="button"
               onClick={toggleAudioIndicator}
+              aria-label="Toogle audio player"
             >
               <audio
                 src="/audio/loop.mp3"

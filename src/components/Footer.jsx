@@ -1,13 +1,14 @@
 import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const footerLink = [
-  { href: "https://github.com/magistrkim", icon: <FaGithub /> },
-  { href: "https://twitter.com", icon: <FaTwitter /> },
+  { href: "https://github.com/magistrkim", icon: <FaGithub />, name: "Github" },
+  { href: "https://twitter.com", icon: <FaTwitter />, name: "Twitter" },
   {
     href: "https://www.linkedin.com/in/nataliya-kachor/",
     icon: <FaLinkedin />,
+    name: "LinkedIn",
   },
-  { href: "https://instagram.com", icon: <FaInstagram /> },
+  { href: "https://instagram.com", icon: <FaInstagram />, name: "Instagram" },
 ];
 
 const Footer = () => {
@@ -20,6 +21,7 @@ const Footer = () => {
         <div className="flex justify-center md:justify-start gap-4">
           {footerLink.map((link, index) => (
             <a
+              aria-label={`Go to ${link.name}`}
               href={link.href}
               key={index}
               target="_blank"
@@ -31,6 +33,7 @@ const Footer = () => {
           ))}
         </div>
         <a
+          aria-label="Go to privacy policy"
           href="#privacy-policy"
           className="text-center text-sm hover:underline md:text-right"
         >
