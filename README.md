@@ -1,7 +1,7 @@
 <div align="center">
   <br />
-    <a href="https://youtu.be/zA9r5zTllx4" target="_blank">
-      <img src="">
+    <a href="https://www.linkedin.com/in/nataliya-kachor/" target="_blank">
+      <img src="https://github.com/user-attachments/assets/abed297a-272f-4c3b-8acf-15c07d51c31e" alt="Project Banner">
     </a>
   <br />
 
@@ -20,11 +20,17 @@
 
 Build a visually captivating website inspired by **[Zentry](https://zentry.com/)**, featuring scroll-triggered animations, geometric transitions, and engaging video storytelling. Learn how to deliver a luxurious, modern feel, focusing on engaging UI/UX and smooth responsiveness, capturing the essence of what makes an Awwwsome winner.
 
+
+![Снимок экрана (321)](https://github.com/user-attachments/assets/ab025423-1637-4f70-ab8a-2762a42e2dbb)
+
+
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
 - GSAP
 - React.js
 - Tailwind CSS
+
+![Снимок экрана (319)](https://github.com/user-attachments/assets/935ddaf2-d0cd-4efb-a568-ad718c82e5ea)
 
 ## <a name="features">🔋 Features</a>
 
@@ -41,3 +47,5 @@ Build a visually captivating website inspired by **[Zentry](https://zentry.com/)
 👉 **Completely Responsive**: Flawless adaptation across all devices, ensuring a consistent experience.
 
 and many more, including code architecture and reusability
+
+![Снимок экрана (320)](https://github.com/user-attachments/assets/c6a89a28-15ad-4203-95b4-f31e06f270ad)
