@@ -17,7 +17,25 @@ const Footer = () => {
         <p className="text-center text-sm md:text-left">
           &copy;MagistrKim 2024. All rights reserved
         </p>
-        <div className="flex justify-center md:justify-start gap-4"></div>
+        <div className="flex justify-center md:justify-start gap-4">
+          {footerLink.map((link, index) => (
+            <a
+              href={link.href}
+              key={index}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white transition-colors duration-500 ease-in-out hover:text-orange-400"
+            >
+              {link.icon}
+            </a>
+          ))}
+        </div>
+        <a
+          href="#privacy-policy"
+          className="text-center text-sm hover:underline md:text-right"
+        >
+          Privacy Policy
+        </a>
       </div>
     </footer>
   );
