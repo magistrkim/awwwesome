@@ -1,3 +1,15 @@
+import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+
+const footerLink = [
+  { href: "https://github.com/magistrkim", icon: <FaGithub /> },
+  { href: "https://twitter.com", icon: <FaTwitter /> },
+  {
+    href: "https://www.linkedin.com/in/nataliya-kachor/",
+    icon: <FaLinkedin />,
+  },
+  { href: "https://instagram.com", icon: <FaInstagram /> },
+];
+
 const Footer = () => {
   return (
     <footer className="w-screen bg-violet-800 py-4 text-white">
@@ -5,6 +17,7 @@ const Footer = () => {
         <p className="text-center text-sm md:text-left">
           &copy;MagistrKim 2024. All rights reserved
         </p>
+        <div className="flex justify-center md:justify-start gap-4"></div>
       </div>
     </footer>
   );
