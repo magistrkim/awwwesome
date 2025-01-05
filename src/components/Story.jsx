@@ -81,6 +81,7 @@ const Story = () => {
               id="realm-button"
               title="Discover prologue"
               containerClass="mt-5"
+              ariaLabel="Discover more button"
             />
           </div>
         </div>

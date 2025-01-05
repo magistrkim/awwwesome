@@ -138,9 +138,9 @@ const Hero = () => {
         </h1>
         <div className="absolute left-0 top-0 size-full z-40">
           <div className="mt-24 px-5 sm:px-10">
-            <h1 className="special-font hero-heading text-blue-75">
+            <h2 className="special-font hero-heading text-blue-75">
               Redefi<b>n</b>e
-            </h1>
+            </h2>
             <p className="mb-5 max-w-64 font-robert-regular text-blue-100">
               Enter the Metagame Layer <br />
               Unleash the Play Economy
@@ -150,13 +150,14 @@ const Hero = () => {
               title="Watch Trailer"
               leftIcon={<TiLocationArrow />}
               containerClass="!bg-yellow-300 flex-center gap-1"
+              ariaLabel="Watch trailer button"
             />
           </div>
         </div>
       </div>
-      <h1 className="special-font hero-heading absolute bottom-5 right-5 text-black">
+      <h2 className="special-font hero-heading absolute bottom-5 right-5 text-black">
         G<b>a</b>ming
-      </h1>
+      </h2>
     </section>
   );
 };
