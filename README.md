@@ -5,7 +5,7 @@
     </a>
   <br />
 
-  <h3 align="center">An Awwwsome Website</h3>
+  <h2 align="center">An Awwwsome App</h2>
   
 </div>
 
