@@ -1,14 +1,3 @@
-<div align="center">
-  <br />
-    <a href="https://www.linkedin.com/in/nataliya-kachor/" target="_blank">
-      <img src="https://github.com/user-attachments/assets/abed297a-272f-4c3b-8acf-15c07d51c31e" alt="Project Banner" style="width: 600px;">
-    </a>
-  <br />
-
-  <h2 align="center">An Awwwsome App</h2>
-  
-</div>
-
   <table>
   <tr>
     <td align="center">
@@ -28,6 +17,16 @@
     </td>
   </tr>
 </table>
+<div align="center">
+  <br />
+    <a href="https://www.linkedin.com/in/nataliya-kachor/" target="_blank">
+      <img src="https://github.com/user-attachments/assets/abed297a-272f-4c3b-8acf-15c07d51c31e" alt="Project Banner" style="width: 600px;">
+    </a>
+  <br />
+
+  <h2 align="center">An Awwwsome App</h2>
+  
+</div>
 
 ## <a name="introduction">🤖 Introduction</a>
 
